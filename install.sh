@@ -5,7 +5,7 @@
 # Web: https://www.xavatar.com    
 #
 # Program:
-#   Install yiimp on Ubuntu 16.04/18.04 running Nginx, MariaDB, and php7.3
+#   Install yiimp on Ubuntu 16.04/18.04 running Nginx, MariaDB, and php7.2
 #   v0.2 (update Avril, 2020)
 # 
 ################################################################################
@@ -160,7 +160,7 @@
     # Installing Installing php7.3
     echo
     echo
-    echo -e "$CYAN => Installing php7.3 : $COL_RESET"
+    echo -e "$CYAN => Installing php7.2 : $COL_RESET"
     echo
     sleep 3
     
@@ -171,9 +171,10 @@
     hide_output sudo apt -y update
 
     if [[ ("$DISTRO" == "16") ]]; then
-    apt_install php7.3-fpm php7.3-opcache php7.3 php7.3-common php7.3-gd php7.3-mysql php7.3-imap php7.3-cli \
-    php7.3-cgi php-pear php-auth imagemagick libruby php7.3-curl php7.3-intl php7.3-pspell mcrypt\
-    php7.3-recode php7.3-sqlite3 php7.3-tidy php7.3-xmlrpc php7.3-xsl memcached php-memcache php-imagick php-gettext php7.3-zip php7.3-mbstring
+    apt_install php7.2-fpm php7.2-opcache php7.2 php7.2-common php7.2-gd php7.2-mysql php7.2-imap php7.2-cli \
+    php7.2-cgi php-pear imagemagick libruby php7.2-curl php7.2-intl php7.2-pspell mcrypt\
+    php7.2-recode php7.2-sqlite3 php7.2-tidy php7.2-xmlrpc php7.2-xsl memcached php-memcache php-imagick php-gettext php7.2-zip php7.2-mbstring \
+    libpsl-dev libnghttp2-dev
     #hide_output sudo phpenmod mcrypt
     #hide_output sudo phpenmod mbstring
     else
